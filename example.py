@@ -20,8 +20,9 @@ else:
 ppk2_test = PPK2_API(ppk2_port)
 ppk2_test.get_modifiers()
 ppk2_test.use_ampere_meter()  # set ampere meter mode
-ppk2_test.toggle_DUT_power("OFF")  # disable DUT power
+ppk2_test.toggle_DUT_power("ON")  # disable DUT power
 
+ppk2_test.set_source_voltage(5000)  # set source voltage in mV
 ppk2_test.start_measuring()  # start measuring
 # measurements are a constant stream of bytes
 # the number of measurements in one sampling period depends on the wait between serial reads
